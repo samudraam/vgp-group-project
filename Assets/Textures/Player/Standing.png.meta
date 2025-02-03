@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e3c62638f65b42eab388d5672221849
+guid: 63b529affa35f431fb84a1cebea0f5c2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -46,9 +46,9 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.51511765}
-  spritePixelsToUnits: 48
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,127 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Astronaut_Run_0
+      name: Standing_0
       rect:
         serializedVersion: 2
         x: 6
-        y: 4
-        width: 13
-        height: 16
+        y: 3
+        width: 15
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd7159d12694420b9949e2b12406426
-      internalID: 170182881
+      spriteID: a2a7ce1a369c64827a009e7e31795f1b
+      internalID: -2088037007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astronaut_Run_1
+      name: Standing_1
       rect:
         serializedVersion: 2
         x: 30
-        y: 5
-        width: 13
-        height: 16
+        y: 3
+        width: 15
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f677698fe869d46c8b8fee4555dd334a
-      internalID: 1871945704
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Astronaut_Run_2
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 5
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8cf49c59c1d7246b0888f8d62458d1df
-      internalID: 380638870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Astronaut_Run_3
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 4
-        width: 11
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 904308fc58be248d0ba7664d2e5a48db
-      internalID: -213932830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Astronaut_Run_4
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 5
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f4a81cbba55148c68d5265f9e03e778
-      internalID: -316121804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Astronaut_Run_5
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 5
-        width: 13
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 350f646d89d6f469d990c8a645aeab7b
-      internalID: 1649656114
+      spriteID: 1d0ae1c8461e741ce80ef95f0ad3563b
+      internalID: -1477078257
       vertices: []
       indices: 
       edges: []
@@ -226,19 +142,15 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Astronaut_Run_0: 170182881
-      Astronaut_Run_1: 1871945704
-      Astronaut_Run_2: 380638870
-      Astronaut_Run_3: -213932830
-      Astronaut_Run_4: -316121804
-      Astronaut_Run_5: 1649656114
+      Standing_0: -2088037007
+      Standing_1: -1477078257
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
