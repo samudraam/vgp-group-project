@@ -4,7 +4,8 @@ using UnityEngine;
 
 
 namespace PlayerCode
-{
+{   public class playerController : MonoBehaviour
+
    {
       Rigidbody2D playerRB;
       Animator animator;
