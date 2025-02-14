@@ -5,8 +5,7 @@ using UnityEngine;
 
 namespace PlayerCode
 {
-   public class playerController : MonoBehaviour
-{
+   {
       Rigidbody2D playerRB;
       Animator animator;
       float speed = 5f;
@@ -49,7 +48,7 @@ namespace PlayerCode
          //jump on key down
          if (Input.GetKeyDown(KeyCode.UpArrow))
          {
-            playerRB.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
+            playerRB.AddForce(Vector2.up * 3f, ForceMode2D.Impulse);
          }
 
          playerRB.velocity = new Vector2(moveInput * speed, playerRB.velocity.y);
