@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private UnityEvent onPlay = new UnityEvent();
+    private bool isPlaying = false;
     void Start()
     {
         
@@ -14,5 +15,10 @@ public class MenuController : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    public void StartGame() {
+        onPlay.Invoke();
+        isPlaying = true;
     }
 }
