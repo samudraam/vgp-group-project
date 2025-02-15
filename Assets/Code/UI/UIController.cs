@@ -1,13 +1,12 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Code.UI
 {
-    public class MenuController : MonoBehaviour
+    public class UIController : MonoBehaviour
     {
         // Start is called before the first frame update
-        public UnityEvent onPlay = new UnityEvent();
-        public bool isPlaying = false;
+        [SerializeField] private GameObject startMenuUI;
+        private MenuController mc;
         void Start()
         {
         
@@ -19,10 +18,10 @@ namespace Code.UI
         
         }
 
-        public void StartGame()
+        public void PlaybuttonHandler()
         {
-            onPlay.Invoke();
-            isPlaying = true;
+            mc.StartGame();
+            startMenuUI.SetActive(false);
         }
     }
 }
