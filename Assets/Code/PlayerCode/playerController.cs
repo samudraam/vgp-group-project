@@ -11,6 +11,7 @@ namespace PlayerCode
       Animator animator;
       float speed = 5f;
       private Vector3 originalScale;
+      public Transform aimPivot;
 
       // Start is called before the first frame update
       void Start()
@@ -60,6 +61,13 @@ namespace PlayerCode
          {
             transform.localScale = new Vector3(originalScale.x * Mathf.Sign(moveInput), originalScale.y, originalScale.z);
          }
+         
+      Vector3 mousePosition = Input.mousePosition;
+      Vector3 mousePositionInWorld = Camera.main. ScreenToWorldPoint(mousePosition);
+      Vector3 directionFromPlayerToMouse = mousePositionInWorld -transform.position;
+      float radiansToMouse = Mathf.Atan2(directionFromPlayerToMouse.y, directionFromPlayerToMouse.x);
+      float angleToMouse = radiansToMouse * Mathf.Rad2Deg;
+      aimPivot.rotation = Quaternion. Euler(0, 0, angleToMouse);
 
       }
    }
