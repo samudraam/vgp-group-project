@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private GameObject startMenuUI;
+    [SerializeField] private GameObject levelMenuUI;
+    [SerializeField] private GameObject overMenuUI;
     
-    private MenuController mc;
+    [SerializeField] private GameObject player;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    
+    public void StartGame() {
+        startMenuUI.SetActive(false);
+        levelMenuUI.gameObject.SetActive(false);
+        overMenuUI.gameObject.SetActive(false);
+        player.SetActive(true);
     }
     
-    public void PlaybuttonHandler() {
-        mc.StartGame();
-        startMenuUI.SetActive(false);
+    public void BackToMenu() {
+        startMenuUI.SetActive(true);
+        levelMenuUI.gameObject.SetActive(false);
+        overMenuUI.gameObject.SetActive(false);
     }
 }
