@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Projectile;
+using PlayerCode;
 public class EnemyController : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform player;
     public float speed = 3f;
     public float chaseRange = 5f;
-
     public float stopRange = 1f;
-
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Vector2 lastPosition;
+    private ProjectileControler projectile;
+    public PlayerHealth phealth;
+    public float damage;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         lastPosition = transform.position;
+        projectile = new ProjectileControler();
     }
 
     // Update is called once per frame
@@ -29,8 +32,7 @@ public class EnemyController : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        float movementSpeed = ((Vector2)transform.position - lastPosition).magnitude / Time.deltaTime; // Calculate speed
-
+        float movementSpeed = ((Vector2)transform.position - lastPosition).magnitude / Time.deltaTime;
 
         if (distance < chaseRange && distance > stopRange)
         {
@@ -44,9 +46,16 @@ public class EnemyController : MonoBehaviour
 
         lastPosition = transform.position;
     }
-    void OnCollisionEnter2D (Collision2D other) {
-        if(other.gameObject.GetComponent<Projectile>()) {
-            Destroy (gameObject);
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.GetComponent<ProjectileControler>())
+        {
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Player") && phealth != null)
+        {
+            other.gameObject.GetComponent<PlayerHealth>().health -= damage;
         }
     }
 }
