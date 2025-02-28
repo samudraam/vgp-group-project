@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class UIController : MonoBehaviour
 {
     [SerializeField] private GameObject startMenuUI;
@@ -11,9 +12,9 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject player;
     void Start()
     {
-        
+        startMenuUI.SetActive(true);
     }
-    
+
     public void StartGame() {
         startMenuUI.SetActive(false);
         levelMenuUI.gameObject.SetActive(false);
