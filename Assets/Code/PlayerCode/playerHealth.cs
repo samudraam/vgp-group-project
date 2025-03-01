@@ -8,6 +8,7 @@ namespace PlayerCode
         public float health;
         public float maxHealth = 600;
         public Image healthBar;
+        public GameObject overMenu;
 
         void Start()
         {
@@ -28,6 +29,7 @@ namespace PlayerCode
             {
                 Debug.Log("Player has died!");
                 Destroy(gameObject);
+                overMenu.SetActive(true);
             }
         }
 
