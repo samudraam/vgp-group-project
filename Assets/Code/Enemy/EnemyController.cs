@@ -17,6 +17,9 @@ public class EnemyController : MonoBehaviour
     public PlayerHealth phealth;
     public float damage;
 
+    private float damageCooldown = 0f;
+    public float damageInterval = 1f;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -52,10 +55,19 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
 
-        if (other.gameObject.CompareTag("Player") && phealth != null)
+    void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerHealth>().health -= damage;
+            PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null && Time.time >= damageCooldown)
+            {
+                playerHealth.health -= damage;
+                Debug.Log("Player takes damage! Health: " + playerHealth.health);
+                damageCooldown = Time.time + damageInterval; // Set cooldown
+            }
         }
     }
 }

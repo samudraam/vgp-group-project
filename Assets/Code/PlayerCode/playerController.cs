@@ -11,7 +11,23 @@ namespace PlayerCode
       float speed = 5f;
       private Vector3 originalScale;
       public GameObject projectile;
-      public int jumpsLeft;
+
+      //jump vars 
+      private int maxJumps = 2;
+      private int currentJumps = 0;
+      public float firstJumpForce = 8f;
+      public float secondJumpForce = 5f;
+
+      // Ground check (I think this is broken)
+      public Transform groundCheck;
+      public float groundCheckRadius = 0.2f;
+      public LayerMask groundLayer;
+      private bool isGrounded;
+
+      //projectile vars
+      private int maxProjectiles = 10;
+      List<GameObject> activeProjectiles = new List<GameObject>();
+
 
       // Start is called before the first frame update
       void Start()
@@ -24,41 +40,11 @@ namespace PlayerCode
       // Update is called once per frame
       void Update()
       {
-         // //move up (to be changed to jump)  
-         // if (Input.GetKey(KeyCode.UpArrow))
-         // {
-         //    transform.position += new Vector3(0, 0.2f, 0);
-         // }
-         // //move down (to be changed to fall through platforms/fastfall)  
-         // if (Input.GetKey(KeyCode.DownArrow))
-         // {
-         //    transform.position += new Vector3(0, -0.2f, 0);
-         // }
-         // //move backwards
-         // if (Input.GetKey(KeyCode.LeftArrow))
-         // {
-         //    transform.position += new Vector3(-0.2f, 0, 0);
-         // }
-         // //move forewards
-         // if (Input.GetKey(KeyCode.LeftArrow))
-         // {
-         //    transform.position += new Vector3(0.2f, 0, 0);
-         // }
+         //-----------------------------------------------------------------------------------------------------
+         //Movement
 
          float moveInput = Input.GetAxisRaw("Horizontal");
-
-         //jump on key down
-         if (Input.GetKeyDown(KeyCode.UpArrow))
-         {
-            if (jumpsLeft > 0)
-            {
-               jumpsLeft--;
-               playerRB.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
-            }
-
-         }
          playerRB.velocity = new Vector2(moveInput * speed, playerRB.velocity.y);
-
          animator.SetFloat("moving", Mathf.Abs(playerRB.velocity.x));
 
          if (moveInput != 0)
@@ -66,34 +52,43 @@ namespace PlayerCode
             transform.localScale = new Vector3(originalScale.x * Mathf.Sign(moveInput), originalScale.y, originalScale.z);
          }
 
+         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+         if (isGrounded)
+         {
+            currentJumps = 0;
+         }
+
+         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && currentJumps < maxJumps)
+         {
+            float jumpForce = (currentJumps == 0) ? firstJumpForce : secondJumpForce;
+            playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
+            playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            currentJumps++;
+         }
+
+         //-----------------------------------------------------------------------------------------------------
+         //Projectiles 
+
          if (Input.GetMouseButtonDown(0))
          {
             GameObject newProjectile = Instantiate(projectile);
 
-            float offset = 0.5f * Mathf.Sign(transform.localScale.x);
-            newProjectile.transform.position = transform.position + new Vector3(offset, 0, 0);
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = 0;
+
+            Vector2 shootDirection = (mousePosition - transform.position).normalized;
+
+            float offset = 0.5f;
+            newProjectile.transform.position = (Vector2)transform.position + shootDirection * offset;
 
             Projectile.ProjectileControler projectileScript = newProjectile.GetComponent<Projectile.ProjectileControler>();
             if (projectileScript != null)
             {
-               projectileScript.SetDirection(Mathf.Sign(transform.localScale.x));
+               projectileScript.SetDirection(shootDirection);
             }
          }
-      }
-      void OnCollisionStay2D(Collision2D other)
-      {
-         if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
-         {
-            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 0.7f);
-            for (int i = 0; i < hits.Length; i++)
-            {
-               RaycastHit2D hit = hits[i];
-               if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
-               {
-                  jumpsLeft = 2;
-               }
-            }
-         }
+
       }
 
    }
