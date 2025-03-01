@@ -49,11 +49,13 @@ namespace PlayerCode
 
          //jump on key down
          if (Input.GetKeyDown(KeyCode.UpArrow))
-         { if(jumpsLeft>0){
+         {
+            if (jumpsLeft > 0)
+            {
                jumpsLeft--;
                playerRB.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
-         }
-      
+            }
+
          }
          playerRB.velocity = new Vector2(moveInput * speed, playerRB.velocity.y);
 
@@ -63,24 +65,36 @@ namespace PlayerCode
          {
             transform.localScale = new Vector3(originalScale.x * Mathf.Sign(moveInput), originalScale.y, originalScale.z);
          }
-         //shooting mechanics
+
          if (Input.GetMouseButtonDown(0))
          {
             GameObject newProjectile = Instantiate(projectile);
-            newProjectile.transform.position = transform.position;
+
+            float offset = 0.5f * Mathf.Sign(transform.localScale.x);
+            newProjectile.transform.position = transform.position + new Vector3(offset, 0, 0);
+
+            Projectile.ProjectileControler projectileScript = newProjectile.GetComponent<Projectile.ProjectileControler>();
+            if (projectileScript != null)
+            {
+               projectileScript.SetDirection(Mathf.Sign(transform.localScale.x));
+            }
          }
       }
-         void OnCollisionStay2D (Collision2D other) {
-         if(other.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+      void OnCollisionStay2D(Collision2D other)
+      {
+         if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 0.7f);
-               for(int i = 0; i < hits. Length; i++) {
-                  RaycastHit2D hit = hits[i];
-                  if(hit.collider.gameObject.layer == LayerMask. NameToLayer("Ground")) {
-                     jumpsLeft = 2;
-                        }
-                     }
+            for (int i = 0; i < hits.Length; i++)
+            {
+               RaycastHit2D hit = hits[i];
+               if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+               {
+                  jumpsLeft = 2;
                }
             }
-         
+         }
+      }
+
    }
 }

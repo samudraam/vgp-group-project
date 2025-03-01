@@ -9,11 +9,22 @@ namespace Projectile
         void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            _rigidbody2D.velocity = transform.right * 10f;
+
+            float direction = transform.localScale.x >= 0 ? 1 : -1;
+            SetDirection(direction);
         }
+
         void OnCollisionEnter2D(Collision2D other)
         {
-            Destroy(gameObject);
+            if (!other.gameObject.CompareTag("Player"))
+            {
+                Destroy(gameObject);
+            }
+        }
+        public void SetDirection(float direction)
+        {
+            if (_rigidbody2D == null) return;
+            _rigidbody2D.velocity = new Vector2(direction * 10f, 0);
         }
     }
 }
