@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace PlayerCode
 {
@@ -28,6 +29,10 @@ namespace PlayerCode
       private int maxProjectiles = 10;
       List<GameObject> activeProjectiles = new List<GameObject>();
 
+      // coin vars
+      public static int numberOfCoins;
+      public TextMeshProUGUI coinsText;
+
 
       // Start is called before the first frame update
       void Start()
@@ -46,6 +51,7 @@ namespace PlayerCode
          float moveInput = Input.GetAxisRaw("Horizontal");
          playerRB.velocity = new Vector2(moveInput * speed, playerRB.velocity.y);
          animator.SetFloat("moving", Mathf.Abs(playerRB.velocity.x));
+
 
          if (moveInput != 0)
          {
@@ -88,6 +94,9 @@ namespace PlayerCode
                projectileScript.SetDirection(shootDirection);
             }
          }
+         //-------------------------------------------------------------------------------------------------------
+         //Coins
+         coinsText.text = "Coins: " + numberOfCoins; 
 
       }
 
