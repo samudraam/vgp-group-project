@@ -82,7 +82,7 @@ namespace PlayerCode
             float offset = 0.5f;
             newProjectile.transform.position = (Vector2)transform.position + shootDirection * offset;
 
-            Projectile.ProjectileControler projectileScript = newProjectile.GetComponent<Projectile.ProjectileControler>();
+            Projectile.ProjectileController projectileScript = newProjectile.GetComponent<Projectile.ProjectileController>();
             if (projectileScript != null)
             {
                projectileScript.SetDirection(shootDirection);

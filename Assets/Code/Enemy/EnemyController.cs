@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Vector2 lastPosition;
-    private ProjectileControler projectile;
+    private ProjectileController projectile;
     public PlayerHealth phealth;
     public float damage;
 
@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         lastPosition = transform.position;
-        projectile = new ProjectileControler();
+        projectile = new ProjectileController();
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class EnemyController : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.GetComponent<ProjectileControler>())
+        if (other.gameObject.GetComponent<ProjectileController>())
         {
             Destroy(gameObject);
         }
