@@ -57,7 +57,9 @@ namespace PlayerCode
          {
             transform.localScale = new Vector3(originalScale.x * Mathf.Sign(moveInput), originalScale.y, originalScale.z);
          }
-
+         if (groundCheck == null){
+            Debug.LogError("No Groundcheck :(");
+         }
          isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
          if (isGrounded)
@@ -96,7 +98,7 @@ namespace PlayerCode
          }
          //-------------------------------------------------------------------------------------------------------
          //Coins
-         coinsText.text = "Coins: " + numberOfCoins; 
+         coinsText.text = numberOfCoins.ToString(); 
 
       }
 
