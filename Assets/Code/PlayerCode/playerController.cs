@@ -26,7 +26,7 @@ namespace PlayerCode
       private bool isGrounded;
 
       //projectile vars
-      private int maxProjectiles = 10;
+      //private int maxProjectiles = 10;
       List<GameObject> activeProjectiles = new List<GameObject>();
 
       // coin vars
