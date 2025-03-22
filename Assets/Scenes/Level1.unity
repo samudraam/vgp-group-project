@@ -7153,8 +7153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ee839277f2149c89fd15a2105602b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  maxHealth: 50
+  health: 600
+  maxHealth: 600
   healthBar: {fileID: 865674349}
   overMenu: {fileID: 584389536}
 --- !u!1 &584389536
