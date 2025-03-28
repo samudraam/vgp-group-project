@@ -19,7 +19,7 @@ namespace PlayerCode
         {
 
             float fillValue = health / maxHealth;
-            Debug.Log("Health: " + health + " / " + maxHealth);
+            //Debug.Log("Health: " + health + " / " + maxHealth);
             if (!float.IsNaN(fillValue) && !float.IsInfinity(fillValue))
             {
                 healthBar.fillAmount = Mathf.Clamp(fillValue, 0, 1);
