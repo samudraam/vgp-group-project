@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 915826157010141868}
   - component: {fileID: 6121950387267851550}
   - component: {fileID: 3811832274185904595}
-  - component: {fileID: -1636338434148856870}
+  - component: {fileID: 316146440052960496}
   m_Layer: 7
   m_Name: Projectile
   m_TagString: Untagged
@@ -149,7 +149,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1636338434148856870
+--- !u!114 &316146440052960496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
