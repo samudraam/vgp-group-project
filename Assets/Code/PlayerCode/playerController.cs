@@ -98,7 +98,7 @@ namespace PlayerCode
          }
          //-------------------------------------------------------------------------------------------------------
          //Coins
-         coinsText.text = numberOfCoins.ToString(); 
+         //coinsText.text = numberOfCoins.ToString(); 
 
       }
 
