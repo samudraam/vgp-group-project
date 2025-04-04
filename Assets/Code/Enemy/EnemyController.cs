@@ -37,7 +37,7 @@ namespace Enemy
         private Vector3 firePointOriginalLocalPos;
 
         float health;
-        float maxHealth = 50f;
+        float maxHealth = 30f;
         public Slider slider;
 
 
