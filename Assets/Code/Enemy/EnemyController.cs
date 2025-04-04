@@ -53,6 +53,8 @@ namespace Enemy
             firePointOriginalLocalPos = firePoint.localPosition;
             health = maxHealth;
             UpdateHealthBar(health, maxHealth);
+            player = GameObject.FindWithTag("Player").transform;
+
 
         }
 
