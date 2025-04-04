@@ -2059,7 +2059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.396}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 73.9, y: -28.3}
+  m_AnchoredPosition: {x: 37.7, y: 31.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.20589906, y: 0.49999988}
 --- !u!114 &910450805
@@ -2082,7 +2082,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2416,6 +2416,10 @@ PrefabInstance:
       propertyPath: coinsText
       value: 
       objectReference: {fileID: 910450805}
+    - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 2594675575479856359, guid: 2a166c0abed304becaccc5cb5e4a8345, type: 3}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: groundCheck
       value: 
