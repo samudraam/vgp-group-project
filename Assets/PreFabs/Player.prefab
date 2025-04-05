@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4088115bc5b554eda838d6cfa5bae7eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 2594675575479856359, guid: 2a166c0abed304becaccc5cb5e4a8345, type: 3}
+  projectile: {fileID: 0}
   firstJumpForce: 8
   secondJumpForce: 5
   groundCheck: {fileID: 0}
