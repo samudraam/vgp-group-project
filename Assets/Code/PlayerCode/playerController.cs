@@ -103,7 +103,7 @@ namespace PlayerCode
          coinsText.text = numberOfCoins.ToString(); 
 
       }
-
+      //UI functions
       public void PauseGame(){
          Time.timeScale = 0; 
          pauseMenuScreen.SetActive(true);
