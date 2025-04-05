@@ -15,7 +15,7 @@ namespace PlayerCode
         void Start()
         {
             health = maxHealth;
-            controller = GetComponent<playerController>(); 
+            controller = GetComponent<playerController>();
         }
 
         void Update()
@@ -33,7 +33,7 @@ namespace PlayerCode
             health -= amount;
             Debug.Log("Player takes damage! Health: " + health);
 
-            controller.TakeDamage(); 
+            controller.TakeDamage();
         }
 
         void UpdateHealthBar()
@@ -45,10 +45,18 @@ namespace PlayerCode
             }
         }
 
+        public void RestoreHealth()
+        {
+            health = maxHealth;
+            UpdateHealthBar();
+            Debug.Log("Health fully restored!");
+        }
+
+
         void Die()
         {
             Debug.Log("Player has died!");
-            Destroy(gameObject); 
+            Destroy(gameObject);
             if (overMenu != null)
                 overMenu.SetActive(true);
         }

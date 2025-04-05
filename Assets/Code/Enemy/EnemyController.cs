@@ -65,19 +65,25 @@ namespace Enemy
             if (player == null) return;
 
             float distance = Vector2.Distance(transform.position, player.position);
+            float xDifference = player.position.x - transform.position.x;
+            float directionX = Mathf.Sign(xDifference); 
 
             if (distance < chaseRange && distance > stopRange)
             {
-                float directionX = Mathf.Sign(player.position.x - transform.position.x);
-
                 rb.velocity = new Vector2(directionX * speed, rb.velocity.y);
 
-                spriteRenderer.flipX = directionX < 0;
+                if (Mathf.Abs(xDifference) > 0.1f) 
+                {
+                    spriteRenderer.flipX = directionX < 0;
+                }
+
                 firePoint.localPosition = new Vector3(
-                spriteRenderer.flipX ? -firePointOriginalLocalPos.x : firePointOriginalLocalPos.x, firePointOriginalLocalPos.y, firePointOriginalLocalPos.z);
+                    spriteRenderer.flipX ? -firePointOriginalLocalPos.x : firePointOriginalLocalPos.x,
+                    firePointOriginalLocalPos.y,
+                    firePointOriginalLocalPos.z
+                );
 
                 animator.SetFloat("moving", Mathf.Abs(rb.velocity.x));
-
             }
             else
             {
@@ -87,7 +93,6 @@ namespace Enemy
 
             if (distance <= chaseRange && !isShooting)
             {
-                Debug.Log("Starting shoot coroutine...");
                 StartCoroutine(ShootRoutine());
             }
         }
@@ -137,15 +142,12 @@ namespace Enemy
                 slimeRb.velocity = direction * 10f;
             }
 
-            Debug.Log("Projectile Fired! Direction: " + direction);
         }
 
 
 
         IEnumerator ShootRoutine()
         {
-            Debug.Log("ShootRoutine() entered");
-
             isShooting = true;
 
             ShootAtPlayer();
@@ -156,7 +158,6 @@ namespace Enemy
         }
         public void TakeDamage()
         {
-            Debug.Log("Enemy health " + health);
 
             health -= 10f;
 
@@ -172,8 +173,6 @@ namespace Enemy
 
         void Die()
         {
-            Debug.Log("Enemy died!");
-
             if (coinPrefab != null)
             {
                 Instantiate(coinPrefab, transform.position, Quaternion.identity);
@@ -184,10 +183,9 @@ namespace Enemy
         IEnumerator FlashRed()
         {
             spriteRenderer.color = Color.red;
-            yield return new WaitForSeconds(0.2f); 
+            yield return new WaitForSeconds(0.2f);
             spriteRenderer.color = Color.white;
         }
-
 
         public void UpdateHealthBar(float currVal, float maxVal)
         {
