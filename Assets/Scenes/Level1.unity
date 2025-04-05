@@ -9299,9 +9299,22 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 112901613}
   m_CullTransparentMesh: 1
 --- !u!1001 &179865024
+=======
+  m_GameObject: {fileID: 142318381}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 36.9, y: -15.2, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &154313930
+>>>>>>> 8fbb087b54928aed44b64eec936c670cfdb97dbc
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -14342,8 +14355,8 @@ Transform:
   m_GameObject: {fileID: 1590451501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.03, y: -0.46, z: 0.06422152}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 19.3, y: -2.7, z: 0.06422152}
+  m_LocalScale: {x: 2.2086096, y: 1.2711424, z: 1.2711424}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

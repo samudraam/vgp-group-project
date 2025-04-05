@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8793281327314623106}
   - component: {fileID: 1597271777178095418}
   - component: {fileID: 4814687515747716059}
+  - component: {fileID: 5342350573211803929}
   m_Layer: 0
   m_Name: Level_End
   m_TagString: Untagged
@@ -121,7 +122,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9722222, y: 1.7777778}
+    oldSize: {x: 0.8333333, y: 1.7777778}
     newSize: {x: 0.9722222, y: 1.7777778}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -142,3 +143,15 @@ PolygonCollider2D:
       - {x: 0.18055555, y: 0.2777778}
       - {x: -0.097222224, y: 0.2777778}
   m_UseDelaunayMesh: 0
+--- !u!114 &5342350573211803929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889555835712150082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421a9a2bd8d894ef487032817df23655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
