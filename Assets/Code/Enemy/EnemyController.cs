@@ -17,6 +17,7 @@ namespace Enemy
         private Vector2 lastPosition;
         private bool isShooting = false;
         public float shootCooldown = 1f;
+        public GameObject coinPrefab;
 
 
         private SpriteRenderer spriteRenderer;
@@ -110,17 +111,17 @@ namespace Enemy
 
         void OnCollisionStay2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Player") && Time.time >= damageCooldown)
             {
                 PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
-                if (playerHealth != null && Time.time >= damageCooldown)
+                if (playerHealth != null)
                 {
-                    playerHealth.health -= damage;
-                    Debug.Log("Player takes damage! Health: " + playerHealth.health);
+                    playerHealth.TakeDamage(damage);
                     damageCooldown = Time.time + damageInterval;
                 }
             }
         }
+
 
         void ShootAtPlayer()
         {
@@ -161,6 +162,8 @@ namespace Enemy
 
             UpdateHealthBar(health, maxHealth);
 
+            StartCoroutine(FlashRed());
+
             if (health <= 0f)
             {
                 Die();
@@ -170,8 +173,21 @@ namespace Enemy
         void Die()
         {
             Debug.Log("Enemy died!");
+
+            if (coinPrefab != null)
+            {
+                Instantiate(coinPrefab, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
+
+        IEnumerator FlashRed()
+        {
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.2f); 
+            spriteRenderer.color = Color.white;
+        }
+
 
         public void UpdateHealthBar(float currVal, float maxVal)
         {
