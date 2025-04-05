@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace PlayerCode
 {
@@ -12,6 +13,7 @@ namespace PlayerCode
       float speed = 5f;
       private Vector3 originalScale;
       public GameObject projectile;
+      public GameObject pauseMenuScreen;
 
       //jump vars 
       private int maxJumps = 2;
@@ -19,7 +21,7 @@ namespace PlayerCode
       public float firstJumpForce = 8f;
       public float secondJumpForce = 5f;
 
-      // Ground check (I think this is broken)
+      // Ground check 
       public Transform groundCheck;
       public float groundCheckRadius = 0.2f;
       public LayerMask groundLayer;
@@ -98,8 +100,23 @@ namespace PlayerCode
          }
          //-------------------------------------------------------------------------------------------------------
          //Coins
-         //coinsText.text = numberOfCoins.ToString(); 
+         coinsText.text = numberOfCoins.ToString(); 
 
+      }
+
+      public void PauseGame(){
+         Time.timeScale = 0; 
+         pauseMenuScreen.SetActive(true);
+      }
+
+      public void ResumeGame(){
+         Time.timeScale = 1; 
+         pauseMenuScreen.SetActive(false); 
+      }
+
+      public void GoToMenu(){
+         Time.timeScale = 1; 
+         SceneManager.LoadScene("LevelMenu");
       }
 
    }
