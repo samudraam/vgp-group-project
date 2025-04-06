@@ -5,13 +5,17 @@ using PlayerCode;
 
 public class CoinPickup : MonoBehaviour
 {
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Player")
+
+        Debug.Log("Hit: " + collision.name + " | Tag: " + collision.tag);
+
+        if (collision.CompareTag("Player"))
         {
-           playerController.numberOfCoins++;
-           Destroy(gameObject);
+            playerController.numberOfCoins++;
+            Destroy(gameObject);
+            Debug.Log("coin picked up!");
         }
     }
 }

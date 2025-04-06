@@ -33,7 +33,7 @@ public class SlimeProjectile : MonoBehaviour
             PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.health -= damage;
+                playerHealth.TakeDamage(damage);
                 Debug.Log("Player hit by slime! Player Health: " + playerHealth.health);
             }
 

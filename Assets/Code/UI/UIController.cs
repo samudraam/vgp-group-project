@@ -20,7 +20,7 @@ public class UIController : MonoBehaviour
         //overMenuUI.gameObject.SetActive(false);
         //player.SetActive(true);
         // health.gameObject.SetActive(true);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level1");
     }
 
     public void BackToMainMenu()
