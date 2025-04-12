@@ -4,12 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelEnd : MonoBehaviour
+
+
 {
-    private void OnTriggerEnter(Collider other)
+    [Tooltip("Name of the scene to load next")]
+    public string nextSceneName = "Level1";
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(0); 
+            Debug.Log("Level complete!");
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 }
+
