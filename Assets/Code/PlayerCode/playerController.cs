@@ -36,6 +36,12 @@ namespace PlayerCode
       private int maxProjectiles = 10;
       private List<GameObject> activeProjectiles = new List<GameObject>();
 
+      [Header("Gun Settings")]
+      public Transform firePoint;
+      public Transform gunTransform;
+
+
+
       // Coins
       [Header("UI")]
       public static int numberOfCoins;
@@ -58,6 +64,7 @@ namespace PlayerCode
          HandleGroundCheck();
          HandleShooting();
          HandleCoinsUI();
+         HandleGunAiming();
       }
 
       // --------------------------------------------------
@@ -107,10 +114,9 @@ namespace PlayerCode
 
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0;
-            Vector2 shootDirection = (mousePosition - transform.position).normalized;
+            Vector2 shootDirection = (mousePosition - firePoint.position).normalized;
 
-            float offset = 0.5f;
-            newProjectile.transform.position = (Vector2)transform.position + shootDirection * offset;
+            newProjectile.transform.position = firePoint.position;
 
             Projectile.ProjectileController projectileScript = newProjectile.GetComponent<Projectile.ProjectileController>();
             if (projectileScript != null)
@@ -119,6 +125,20 @@ namespace PlayerCode
             }
          }
       }
+      private void HandleGunAiming()
+      {
+         if (gunTransform == null) return;
+
+         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+         mousePosition.z = 0;
+
+         Vector3 direction = mousePosition - gunTransform.position;
+         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+         angle = Mathf.Clamp(angle, -90f, 90f);
+         gunTransform.rotation = Quaternion.Euler(0, 0, angle);
+      }
+
+
       private IEnumerator FlashRed()
       {
          spriteRenderer.color = Color.red;
