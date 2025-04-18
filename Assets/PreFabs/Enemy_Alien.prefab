@@ -408,11 +408,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b285b2b31ed44cc8d1c671fce46da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3362842699037445650, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+  player: {fileID: 0}
   speed: 3
   chaseRange: 8
   stopRange: 2
   shootCooldown: 2
+  coinPrefab: {fileID: 6978042835165968903, guid: bee07615b60925540a214bea382ed8da, type: 3}
   phealth: {fileID: 0}
   damage: 100
   damageInterval: 1
@@ -562,7 +563,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &5678451700991242658
 MonoBehaviour:

@@ -17,6 +17,7 @@ namespace Enemy
         private Vector2 lastPosition;
         private bool isShooting = false;
         public float shootCooldown = 1f;
+        public GameObject coinPrefab;
 
 
         private SpriteRenderer spriteRenderer;
@@ -37,7 +38,7 @@ namespace Enemy
         private Vector3 firePointOriginalLocalPos;
 
         float health;
-        float maxHealth = 50f;
+        float maxHealth = 30f;
         public Slider slider;
 
 
@@ -64,19 +65,25 @@ namespace Enemy
             if (player == null) return;
 
             float distance = Vector2.Distance(transform.position, player.position);
+            float xDifference = player.position.x - transform.position.x;
+            float directionX = Mathf.Sign(xDifference); 
 
             if (distance < chaseRange && distance > stopRange)
             {
-                float directionX = Mathf.Sign(player.position.x - transform.position.x);
-
                 rb.velocity = new Vector2(directionX * speed, rb.velocity.y);
 
-                spriteRenderer.flipX = directionX < 0;
+                if (Mathf.Abs(xDifference) > 0.1f) 
+                {
+                    spriteRenderer.flipX = directionX < 0;
+                }
+
                 firePoint.localPosition = new Vector3(
-                spriteRenderer.flipX ? -firePointOriginalLocalPos.x : firePointOriginalLocalPos.x, firePointOriginalLocalPos.y, firePointOriginalLocalPos.z);
+                    spriteRenderer.flipX ? -firePointOriginalLocalPos.x : firePointOriginalLocalPos.x,
+                    firePointOriginalLocalPos.y,
+                    firePointOriginalLocalPos.z
+                );
 
                 animator.SetFloat("moving", Mathf.Abs(rb.velocity.x));
-
             }
             else
             {
@@ -86,7 +93,6 @@ namespace Enemy
 
             if (distance <= chaseRange && !isShooting)
             {
-                Debug.Log("Starting shoot coroutine...");
                 StartCoroutine(ShootRoutine());
             }
         }
@@ -110,17 +116,17 @@ namespace Enemy
 
         void OnCollisionStay2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Player") && Time.time >= damageCooldown)
             {
                 PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
-                if (playerHealth != null && Time.time >= damageCooldown)
+                if (playerHealth != null)
                 {
-                    playerHealth.health -= damage;
-                    Debug.Log("Player takes damage! Health: " + playerHealth.health);
+                    playerHealth.TakeDamage(damage);
                     damageCooldown = Time.time + damageInterval;
                 }
             }
         }
+
 
         void ShootAtPlayer()
         {
@@ -136,15 +142,12 @@ namespace Enemy
                 slimeRb.velocity = direction * 10f;
             }
 
-            Debug.Log("Projectile Fired! Direction: " + direction);
         }
 
 
 
         IEnumerator ShootRoutine()
         {
-            Debug.Log("ShootRoutine() entered");
-
             isShooting = true;
 
             ShootAtPlayer();
@@ -155,11 +158,12 @@ namespace Enemy
         }
         public void TakeDamage()
         {
-            Debug.Log("Enemy health " + health);
 
             health -= 10f;
 
             UpdateHealthBar(health, maxHealth);
+
+            StartCoroutine(FlashRed());
 
             if (health <= 0f)
             {
@@ -169,8 +173,18 @@ namespace Enemy
 
         void Die()
         {
-            Debug.Log("Enemy died!");
+            if (coinPrefab != null)
+            {
+                Instantiate(coinPrefab, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
+        }
+
+        IEnumerator FlashRed()
+        {
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.2f);
+            spriteRenderer.color = Color.white;
         }
 
         public void UpdateHealthBar(float currVal, float maxVal)
