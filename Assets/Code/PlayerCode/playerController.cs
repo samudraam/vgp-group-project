@@ -8,6 +8,7 @@ namespace PlayerCode
 {
    public class playerController : MonoBehaviour
    {
+
       // Components
       private Rigidbody2D playerRB;
       private Animator animator;
@@ -51,7 +52,7 @@ namespace PlayerCode
       // --------------------------------------------------
       void Start()
       {
-         numberOfCoins = 0;
+         numberOfCoins = PlayerPrefs.GetInt("Coins");
          playerRB = GetComponent<Rigidbody2D>();
          animator = GetComponent<Animator>();
          spriteRenderer = GetComponent<SpriteRenderer>();

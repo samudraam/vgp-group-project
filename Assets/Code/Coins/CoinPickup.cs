@@ -9,11 +9,10 @@ public class CoinPickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        Debug.Log("Hit: " + collision.name + " | Tag: " + collision.tag);
-
         if (collision.CompareTag("Player"))
         {
-            playerController.numberOfCoins++;
+            playerController.numberOfCoins++; 
+            PlayerPrefs.SetInt("Coins", playerController.numberOfCoins);
             Destroy(gameObject);
             Debug.Log("coin picked up!");
         }
