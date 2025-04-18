@@ -14,6 +14,7 @@ namespace PlayerCode
       private Vector3 originalScale;
       public GameObject projectile;
       public GameObject pauseMenuScreen;
+      public GameObject shopMenuScreen;
 
       //jump vars 
       private int maxJumps = 2;
@@ -42,6 +43,8 @@ namespace PlayerCode
          playerRB = GetComponent<Rigidbody2D>();
          animator = GetComponent<Animator>();
          originalScale = transform.localScale;
+         pauseMenuScreen.SetActive(false); 
+         shopMenuScreen.SetActive(false); 
       }
 
       // Update is called once per frame
@@ -117,6 +120,15 @@ namespace PlayerCode
       public void GoToMenu(){
          Time.timeScale = 1; 
          SceneManager.LoadScene("LevelMenu");
+      }
+
+      public void GoToShop(){
+         shopMenuScreen.SetActive(true);
+         pauseMenuScreen.SetActive(false); 
+      }
+      public void LeaveShop(){
+         shopMenuScreen.SetActive(false); 
+         pauseMenuScreen.SetActive(true); 
       }
 
    }
