@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841090597215105225}
   - component: {fileID: 7951738522914513113}
+  - component: {fileID: 5057798605567823850}
   m_Layer: 10
   m_Name: Pistol
   m_TagString: Untagged
@@ -85,6 +86,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5057798605567823850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311716059320602424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6458fe344d97e4ef190acedf56e5370b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 2594675575479856359, guid: 2a166c0abed304becaccc5cb5e4a8345, type: 3}
+  firePoint: {fileID: 4736852323985903354}
+  fireRate: 1
+  projectileSpeed: 5
+  damage: 1
+  gunTransform: {fileID: 841090597215105225}
+  numberOfProjectiles: 1
+  spreadAngle: 0
 --- !u!1 &8078778252956636893
 GameObject:
   m_ObjectHideFlags: 0
