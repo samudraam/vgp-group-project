@@ -19,6 +19,10 @@ public class weaponController : MonoBehaviour
     public int numberOfProjectiles = 1;
     public float spreadAngle = 5f;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip shootSound;
+
     void Update()
     {
         HandleGunAiming();
@@ -55,6 +59,11 @@ public class weaponController : MonoBehaviour
             }
 
         }
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
+
 
     }
 
