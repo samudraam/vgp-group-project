@@ -58,8 +58,8 @@ namespace PlayerCode
          animator = GetComponent<Animator>();
          spriteRenderer = GetComponent<SpriteRenderer>();
          originalScale = transform.localScale;
-         pauseMenuScreen.SetActive(false); 
-         shopMenuScreen.SetActive(false); 
+         pauseMenuScreen.SetActive(false);
+         shopMenuScreen.SetActive(false);
       }
 
       void Update()
@@ -155,6 +155,8 @@ namespace PlayerCode
       {
          Time.timeScale = 0;
          pauseMenuScreen.SetActive(true);
+         Debug.Log("Pause key pressed");
+
       }
 
       public void ResumeGame()
@@ -169,13 +171,15 @@ namespace PlayerCode
          SceneManager.LoadScene("LevelMenu");
       }
 
-      public void GoToShop(){
+      public void GoToShop()
+      {
          shopMenuScreen.SetActive(true);
-         pauseMenuScreen.SetActive(false); 
+         pauseMenuScreen.SetActive(false);
       }
-      public void LeaveShop(){
-         shopMenuScreen.SetActive(false); 
-         pauseMenuScreen.SetActive(true); 
+      public void LeaveShop()
+      {
+         shopMenuScreen.SetActive(false);
+         pauseMenuScreen.SetActive(true);
       }
 
       public void TakeDamage()
