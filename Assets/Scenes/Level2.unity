@@ -15455,6 +15455,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f9a1fa675e441d6a3e7e05f8686754, type: 3}
+--- !u!4 &198306301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3044683516318049499, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+  m_PrefabInstance: {fileID: 3640635447080147675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &235277382
 GameObject:
   m_ObjectHideFlags: 0
@@ -24671,6 +24676,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c09d4886232c4991b595e4f533c7b22, type: 3}
+--- !u!4 &2061254070 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6940164539067095784, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+  m_PrefabInstance: {fileID: 3640635447080147675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2085365909
 GameObject:
   m_ObjectHideFlags: 0
@@ -24927,6 +24937,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407027796535003896, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3362842699037445650, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.46
@@ -24982,7 +24996,7 @@ PrefabInstance:
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: firePoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 198306301}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: projectile
       value: 
@@ -24994,7 +25008,7 @@ PrefabInstance:
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: gunTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2061254070}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: shopMenuScreen
       value: 
