@@ -67,9 +67,9 @@ namespace PlayerCode
          HandleMovement();
          HandleJumping();
          HandleGroundCheck();
-         HandleShooting();
+         //HandleShooting();
          HandleCoinsUI();
-         HandleGunAiming();
+         //HandleGunAiming();
       }
 
       // --------------------------------------------------
@@ -111,37 +111,37 @@ namespace PlayerCode
          }
       }
 
-      private void HandleShooting()
-      {
-         if (Input.GetMouseButtonDown(0))
-         {
-            GameObject newProjectile = Instantiate(projectile);
+      // private void HandleShooting()
+      // {
+      //    if (Input.GetMouseButtonDown(0))
+      //    {
+      //       GameObject newProjectile = Instantiate(projectile);
 
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = 0;
-            Vector2 shootDirection = (mousePosition - firePoint.position).normalized;
+      //       Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+      //       mousePosition.z = 0;
+      //       Vector2 shootDirection = (mousePosition - firePoint.position).normalized;
 
-            newProjectile.transform.position = firePoint.position;
+      //       newProjectile.transform.position = firePoint.position;
 
-            Projectile.ProjectileController projectileScript = newProjectile.GetComponent<Projectile.ProjectileController>();
-            if (projectileScript != null)
-            {
-               projectileScript.SetDirection(shootDirection);
-            }
-         }
-      }
-      private void HandleGunAiming()
-      {
-         if (gunTransform == null) return;
+      //       Projectile.ProjectileController projectileScript = newProjectile.GetComponent<Projectile.ProjectileController>();
+      //       if (projectileScript != null)
+      //       {
+      //          projectileScript.SetDirection(shootDirection);
+      //       }
+      //    }
+      // }
+      // private void HandleGunAiming()
+      // {
+      //    if (gunTransform == null) return;
 
-         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-         mousePosition.z = 0;
+      //    Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+      //    mousePosition.z = 0;
 
-         Vector3 direction = mousePosition - gunTransform.position;
-         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-         angle = Mathf.Clamp(angle, -90f, 90f);
-         gunTransform.rotation = Quaternion.Euler(0, 0, angle);
-      }
+      //    Vector3 direction = mousePosition - gunTransform.position;
+      //    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+      //    angle = Mathf.Clamp(angle, -90f, 90f);
+      //    gunTransform.rotation = Quaternion.Euler(0, 0, angle);
+      // }
 
 
       private IEnumerator FlashRed()
