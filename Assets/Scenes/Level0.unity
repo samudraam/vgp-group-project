@@ -7092,6 +7092,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878469085}
   m_CullTransparentMesh: 1
+--- !u!1 &1919311180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4937361692856950985, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+  m_PrefabInstance: {fileID: 3640635447080147675}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1919311181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5438764122221551416, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+  m_PrefabInstance: {fileID: 3640635447080147675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1949988155
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,9 +7347,9 @@ RectTransform:
   - {fileID: 1159899420}
   m_Father: {fileID: 1741756975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 532, y: -90}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 60}
   m_SizeDelta: {x: 25, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022147554
@@ -7809,6 +7819,14 @@ PrefabInstance:
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 932402039}
+    - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: gunTransform
+      value: 
+      objectReference: {fileID: 1919311181}
+    - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: currentWeapon
+      value: 
+      objectReference: {fileID: 1919311180}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: pauseMenuScreen
       value: 

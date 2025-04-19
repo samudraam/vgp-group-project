@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+
 public class UIController : MonoBehaviour
 {
     //[SerializeField] private GameObject startMenuUI;
@@ -46,4 +47,10 @@ public class UIController : MonoBehaviour
         Debug.Log("You Win!");
         levelMenuUI.SetActive(true); // Temporary
     }
+
+   /* public void ButtonWeaponChange(){
+       GameObject tempBtn = EventSystem.currentSelectedGameObject;
+       int tempBtnIndex = tempBtw.tranform.GetSiblingIndex();
+    } */
+
 }

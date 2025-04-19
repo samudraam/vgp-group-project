@@ -16,6 +16,7 @@ namespace PlayerCode
       private Vector3 originalScale;
       public GameObject pauseMenuScreen;
       public GameObject shopMenuScreen;
+      public GameObject currentWeapon;
 
       // Movement
       [SerializeField] private float speed = 5f;
