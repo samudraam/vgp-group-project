@@ -3604,6 +3604,11 @@ RectTransform:
   m_AnchoredPosition: {x: -700, y: 450}
   m_SizeDelta: {x: 420, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &880526902 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3044683516318049499, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+  m_PrefabInstance: {fileID: 3640635447080147675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &932402038
 GameObject:
   m_ObjectHideFlags: 0
@@ -7092,16 +7097,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878469085}
   m_CullTransparentMesh: 1
---- !u!1 &1919311180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4937361692856950985, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
-  m_PrefabInstance: {fileID: 3640635447080147675}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1919311181 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5438764122221551416, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
-  m_PrefabInstance: {fileID: 3640635447080147675}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1949988155
 GameObject:
   m_ObjectHideFlags: 0
@@ -7180,6 +7175,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949988155}
   m_CullTransparentMesh: 1
+--- !u!1 &1960372193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8047718726706980121, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+  m_PrefabInstance: {fileID: 3640635447080147675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1987807991
 GameObject:
   m_ObjectHideFlags: 0
@@ -7799,6 +7799,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4786535855741518950, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: wPivot
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: aimPivot
       value: 
@@ -7807,6 +7811,10 @@ PrefabInstance:
       propertyPath: coinsText
       value: 
       objectReference: {fileID: 1159899421}
+    - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 880526902}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: jumpsLeft
       value: 10
@@ -7822,11 +7830,11 @@ PrefabInstance:
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: gunTransform
       value: 
-      objectReference: {fileID: 1919311181}
+      objectReference: {fileID: 0}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: currentWeapon
       value: 
-      objectReference: {fileID: 1919311180}
+      objectReference: {fileID: 1960372193}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: pauseMenuScreen
       value: 
@@ -7849,7 +7857,8 @@ PrefabInstance:
       objectReference: {fileID: 865674349}
     m_RemovedComponents:
     - {fileID: 9134004415055914013, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1341698013520819267, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3362842699037445650, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       insertIndex: -1
