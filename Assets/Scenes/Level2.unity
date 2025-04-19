@@ -12034,11 +12034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4088115bc5b554eda838d6cfa5bae7eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &473988069 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 102129516773843211, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
-  m_PrefabInstance: {fileID: 3640635447080147675}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &485206567
 GameObject:
   m_ObjectHideFlags: 0
@@ -16473,11 +16468,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997934080}
   m_CullTransparentMesh: 1
---- !u!4 &1011974829 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5438764122221551416, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
-  m_PrefabInstance: {fileID: 3640635447080147675}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1018315294
 GameObject:
   m_ObjectHideFlags: 0
@@ -19173,7 +19163,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -19945,7 +19935,7 @@ PrefabInstance:
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: firePoint
       value: 
-      objectReference: {fileID: 473988069}
+      objectReference: {fileID: 0}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: projectile
       value: 
@@ -19957,7 +19947,7 @@ PrefabInstance:
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: gunTransform
       value: 
-      objectReference: {fileID: 1011974829}
+      objectReference: {fileID: 0}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: shopMenuScreen
       value: 
