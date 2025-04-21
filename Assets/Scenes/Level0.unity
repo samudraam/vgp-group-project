@@ -1776,6 +1776,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306273591 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4586504273638280403, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 903615554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &378349011
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,6 +2402,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24aa262e9e8654509b1f030e0bb0f2ed, type: 3}
+--- !u!114 &676743104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6505929329861055339, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 903615554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &698094316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3625,6 +3647,18 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 417710835}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: riflePriceText
+      value: 
+      objectReference: {fileID: 676743104}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: pistolPriceText
+      value: 
+      objectReference: {fileID: 1038342200}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: shotgunPriceText
+      value: 
+      objectReference: {fileID: 306273591}
     - target: {fileID: 3231687651322089508, guid: 9f5514691779b438091a909ec90828a0, type: 3}
       propertyPath: m_Name
       value: Rifle
@@ -4310,6 +4344,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.899109, y: 12.17923}
   m_EdgeRadius: 0
+--- !u!114 &1038342200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1552159706415236763, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 903615554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1042192578
 GameObject:
   m_ObjectHideFlags: 0
@@ -4402,6 +4447,18 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 132836649}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: riflePriceText
+      value: 
+      objectReference: {fileID: 676743104}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: pistolPriceText
+      value: 
+      objectReference: {fileID: 1038342200}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: shotgunPriceText
+      value: 
+      objectReference: {fileID: 306273591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7160,6 +7217,18 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1390408681}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: riflePriceText
+      value: 
+      objectReference: {fileID: 676743104}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: pistolPriceText
+      value: 
+      objectReference: {fileID: 1038342200}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: shotgunPriceText
+      value: 
+      objectReference: {fileID: 306273591}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

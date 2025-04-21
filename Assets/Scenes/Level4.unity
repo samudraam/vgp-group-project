@@ -13128,6 +13128,39 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdf951d6c5f0a4e05abff49187c6972b, type: 3}
+--- !u!114 &148199508 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 281132990859896058, guid: cdf951d6c5f0a4e05abff49187c6972b, type: 3}
+  m_PrefabInstance: {fileID: 148199507}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &148199509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6273913036309060297, guid: cdf951d6c5f0a4e05abff49187c6972b, type: 3}
+  m_PrefabInstance: {fileID: 148199507}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &148199510 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2501209935490213382, guid: cdf951d6c5f0a4e05abff49187c6972b, type: 3}
+  m_PrefabInstance: {fileID: 148199507}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &149754852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14284,6 +14317,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: ammoText
+      value: 
+      objectReference: {fileID: 148199508}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: riflePriceText
+      value: 
+      objectReference: {fileID: 1503519812}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: pistolPriceText
+      value: 
+      objectReference: {fileID: 1503519813}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: shotgunPriceText
+      value: 
+      objectReference: {fileID: 1503519811}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18738,6 +18787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 8032707438612765724, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18753,6 +18806,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8032707438612765724, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
   m_PrefabInstance: {fileID: 1503519808}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1503519811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4586504273638280403, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 1503519808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1503519812 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6505929329861055339, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 1503519808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1503519813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1552159706415236763, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 1503519808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1510375137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3794660707767411265, guid: f6d15d90abfdc47ec82286adb701afd9, type: 3}
@@ -19512,9 +19598,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: ammoText
+      value: 
+      objectReference: {fileID: 148199510}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 794790346}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: riflePriceText
+      value: 
+      objectReference: {fileID: 1503519812}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: pistolPriceText
+      value: 
+      objectReference: {fileID: 148199510}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: shotgunPriceText
+      value: 
+      objectReference: {fileID: 1503519811}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21121,6 +21223,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: ammoText
+      value: 
+      objectReference: {fileID: 148199509}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: riflePriceText
+      value: 
+      objectReference: {fileID: 1503519812}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: pistolPriceText
+      value: 
+      objectReference: {fileID: 1503519813}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: shotgunPriceText
+      value: 
+      objectReference: {fileID: 1503519811}
     - target: {fileID: 3231687651322089508, guid: 9f5514691779b438091a909ec90828a0, type: 3}
       propertyPath: m_Name
       value: Rifle

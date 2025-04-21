@@ -6256,7 +6256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 600
   maxHealth: 600
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1244949879}
   overMenu: {fileID: 878959992}
 --- !u!114 &358487774 stripped
 MonoBehaviour:
@@ -8433,6 +8433,18 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1292422698}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: riflePriceText
+      value: 
+      objectReference: {fileID: 1250910847}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: pistolPriceText
+      value: 
+      objectReference: {fileID: 1250910848}
+    - target: {fileID: 7741237725001061491, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
+      propertyPath: shotgunPriceText
+      value: 
+      objectReference: {fileID: 1250910846}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8573,6 +8585,18 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1931694876}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: riflePriceText
+      value: 
+      objectReference: {fileID: 1250910847}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: pistolPriceText
+      value: 
+      objectReference: {fileID: 1250910848}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: shotgunPriceText
+      value: 
+      objectReference: {fileID: 1250910846}
     - target: {fileID: 3231687651322089508, guid: 9f5514691779b438091a909ec90828a0, type: 3}
       propertyPath: m_Name
       value: Rifle
@@ -8784,6 +8808,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9113314307025407310, guid: 7c09d4886232c4991b595e4f533c7b22, type: 3}
   m_PrefabInstance: {fileID: 1307928996}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1244949879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4441454217704742534, guid: 8e2ba77e650f2444f9bc26cda6494553, type: 3}
+  m_PrefabInstance: {fileID: 1375149645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1250910844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8884,6 +8919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 8032707438612765724, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8894,6 +8933,39 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4674648466105334357, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
   m_PrefabInstance: {fileID: 1250910844}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1250910846 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4586504273638280403, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 1250910844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1250910847 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6505929329861055339, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 1250910844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1250910848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1552159706415236763, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 1250910844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1260231139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8950,6 +9022,18 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 499640669}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: riflePriceText
+      value: 
+      objectReference: {fileID: 1250910847}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: pistolPriceText
+      value: 
+      objectReference: {fileID: 1250910848}
+    - target: {fileID: 5057798605567823850, guid: 34896b5e53a984092b2bbf1fac59c5c9, type: 3}
+      propertyPath: shotgunPriceText
+      value: 
+      objectReference: {fileID: 1250910846}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

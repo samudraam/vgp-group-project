@@ -242,20 +242,35 @@ namespace PlayerCode
             Debug.LogError("Cannot buy rifle ammo - weapon controller reference is missing!");
          }
       }
-      
-     public void OnBuyShotgunAmmoClicked()
-{
-    weaponController foundWeapon = FindObjectOfType<weaponController>();
-    
-    if (foundWeapon != null)
-    {
-        foundWeapon.BuyShotgunAmmo();
-    }
-    else
-    {
-        Debug.LogError("Cannot buy shotgun ammo - no weaponController found in scene!");
-    }
-}
-      
+
+      public void OnBuyShotgunAmmoClicked()
+      {
+         weaponController foundWeapon = FindObjectOfType<weaponController>();
+
+         if (foundWeapon != null)
+         {
+            foundWeapon.BuyShotgunAmmo();
+         }
+         else
+         {
+            Debug.LogError("Cannot buy shotgun ammo - no weaponController found in scene!");
+         }
+      }
+      public void OnBuyPistolAmmoClicked()
+      {
+         weaponController foundWeapon = FindObjectOfType<weaponController>();
+
+         if (foundWeapon != null)
+         {
+            foundWeapon.BuyPistolAmmo();
+         }
+         else
+         {
+            Debug.LogError("Cannot buy pistol ammo - no weaponController found in scene!");
+         }
+      }
+
+
    }
+
 }

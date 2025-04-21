@@ -36,16 +36,36 @@ namespace weaponCode
 
         [Header("Player Controller Reference")]
         private playerController playerControllerRef;
-
         [Header("Ammo Prices")]
-        public int rifleAmmoCost = 5;
-        public int shotgunAmmoCost = 10;
+        public int rifleAmmoBaseCost = 5;
+        public int shotgunAmmoBaseCost = 10;
+        private int rifleAmmoCurrentCost;
+        private int shotgunAmmoCurrentCost;
+
         public int ammoPerPurchase = 5;
+        public int priceIncreasePerPurchase = 2;
+
+        public int pistolAmmoBaseCost = 2;
+        private int pistolAmmoCurrentCost;
+
+        [Header("UI Price Text")]
+
+        public TextMeshProUGUI pistolPriceText;
+        public TextMeshProUGUI riflePriceText;
+        public TextMeshProUGUI shotgunPriceText;
+
+
+
 
         void Start()
         {
             currentBullets = maxBullets;
             playerControllerRef = FindObjectOfType<playerController>();
+
+            rifleAmmoCurrentCost = rifleAmmoBaseCost;
+            shotgunAmmoCurrentCost = shotgunAmmoBaseCost;
+            pistolAmmoCurrentCost = pistolAmmoBaseCost;
+
             if (playerControllerRef == null)
             {
                 Debug.LogWarning("Player Controller not found! Coin-based purchases won't work.");
@@ -133,7 +153,7 @@ namespace weaponCode
                 return false;
             }
 
-            if (playerController.numberOfCoins >= rifleAmmoCost)
+            if (playerController.numberOfCoins >= rifleAmmoCurrentCost)
             {
                 if (currentBullets >= maxBullets)
                 {
@@ -141,32 +161,36 @@ namespace weaponCode
                     return false;
                 }
 
-                playerController.numberOfCoins -= rifleAmmoCost;
+                playerController.numberOfCoins -= rifleAmmoCurrentCost;
+                rifleAmmoCurrentCost += priceIncreasePerPurchase;
+                UpdateShopPriceUI();
+
                 PlayerPrefs.SetInt("Coins", playerController.numberOfCoins);
                 PlayerPrefs.Save();
 
                 currentBullets = Mathf.Min(currentBullets + ammoPerPurchase, maxBullets);
-
                 UpdateAmmoUI();
-                Debug.Log("Purchased rifle ammo! Current bullets: " + currentBullets);
+
+                Debug.Log("Purchased rifle ammo for " + (rifleAmmoCurrentCost - priceIncreasePerPurchase) + "! New cost: " + rifleAmmoCurrentCost);
                 return true;
             }
             else
             {
-                Debug.Log("Not enough coins to buy rifle ammo!");
+                Debug.Log("Not enough coins! Need " + rifleAmmoCurrentCost);
                 return false;
             }
         }
 
+
         public bool BuyShotgunAmmo()
         {
-\            if (playerControllerRef == null)
+            if (playerControllerRef == null)
             {
                 Debug.LogError("Player Controller reference is missing!");
                 return false;
             }
 
-            if (playerController.numberOfCoins >= shotgunAmmoCost)
+            if (playerController.numberOfCoins >= shotgunAmmoCurrentCost)
             {
                 if (currentBullets >= maxBullets)
                 {
@@ -174,23 +198,74 @@ namespace weaponCode
                     return false;
                 }
 
-                playerController.numberOfCoins -= shotgunAmmoCost;
+                playerController.numberOfCoins -= shotgunAmmoCurrentCost;
+                shotgunAmmoCurrentCost += priceIncreasePerPurchase;
+                UpdateShopPriceUI();
+
                 PlayerPrefs.SetInt("Coins", playerController.numberOfCoins);
                 PlayerPrefs.Save();
 
                 currentBullets = Mathf.Min(currentBullets + ammoPerPurchase, maxBullets);
-
-
                 UpdateAmmoUI();
-                Debug.Log("Purchased shotgun ammo! Current bullets: " + currentBullets);
+
+                Debug.Log("Purchased shotgun ammo for " + (shotgunAmmoCurrentCost - priceIncreasePerPurchase) + "! New cost: " + shotgunAmmoCurrentCost);
                 return true;
             }
             else
             {
-                Debug.Log("Not enough coins to buy shotgun ammo!");
+                Debug.Log("Not enough coins! Need " + shotgunAmmoCurrentCost);
                 return false;
             }
         }
+
+        public bool BuyPistolAmmo()
+        {
+            if (playerControllerRef == null)
+            {
+                Debug.LogError("Player Controller reference is missing!");
+                return false;
+            }
+
+            if (playerController.numberOfCoins >= pistolAmmoCurrentCost)
+            {
+                if (currentBullets >= maxBullets)
+                {
+                    Debug.Log("Ammo is already at max capacity!");
+                    return false;
+                }
+
+                playerController.numberOfCoins -= pistolAmmoCurrentCost;
+                pistolAmmoCurrentCost += priceIncreasePerPurchase;
+                UpdateShopPriceUI();
+
+                PlayerPrefs.SetInt("Coins", playerController.numberOfCoins);
+                PlayerPrefs.Save();
+
+                currentBullets = Mathf.Min(currentBullets + ammoPerPurchase, maxBullets);
+                UpdateAmmoUI();
+
+                Debug.Log("Purchased pistol ammo for " + (pistolAmmoCurrentCost - priceIncreasePerPurchase) + "! New cost: " + pistolAmmoCurrentCost);
+                return true;
+            }
+            else
+            {
+                Debug.Log("Not enough coins! Need " + pistolAmmoCurrentCost);
+                return false;
+            }
+        }
+        public void UpdateShopPriceUI()
+        {
+            if (pistolPriceText != null)
+                pistolPriceText.text = "-" + pistolAmmoCurrentCost.ToString();
+
+            if (riflePriceText != null)
+                riflePriceText.text = "-" + rifleAmmoCurrentCost.ToString();
+
+            if (shotgunPriceText != null)
+                shotgunPriceText.text = "-" + shotgunAmmoCurrentCost.ToString();
+        }
+
+
     }
 
 }
