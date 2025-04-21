@@ -85,6 +85,8 @@ namespace PlayerCode
          HandleGroundCheck();
          //HandleShooting();
          HandleCoinsUI();
+         HandlePlayerFlipWithMouse();
+
          //HandleGunAiming();
       }
 
@@ -96,11 +98,6 @@ namespace PlayerCode
 
          playerRB.velocity = new Vector2(moveInput * speed, playerRB.velocity.y);
          animator.SetFloat("moving", Mathf.Abs(playerRB.velocity.x));
-
-         if (isMoving)
-         {
-            transform.localScale = new Vector3(originalScale.x * Mathf.Sign(moveInput), originalScale.y, originalScale.z);
-         }
 
          if (isMoving && isGrounded)
          {
@@ -269,8 +266,21 @@ namespace PlayerCode
             Debug.LogError("Cannot buy pistol ammo - no weaponController found in scene!");
          }
       }
+      private void HandlePlayerFlipWithMouse()
+      {
+         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+         if (mousePosition.x < transform.position.x)
+         {
+            transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+         }
+         else
+         {
+            transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+         }
+      }
 
    }
+
 
 }

@@ -136,9 +136,17 @@ namespace weaponCode
 
             Vector3 direction = mousePosition - gunTransform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            angle = Mathf.Clamp(angle, -45f, 45f);
+
+            bool isFacingLeft = transform.root.localScale.x < 0;
+
+            if (isFacingLeft)
+            {
+                angle += 180f;
+            }
+
             gunTransform.rotation = Quaternion.Euler(0, 0, angle);
         }
+
 
         private void UpdateAmmoUI()
         {
