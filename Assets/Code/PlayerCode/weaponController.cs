@@ -22,20 +22,45 @@ public class weaponController : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip shootSound;
+    public AudioClip emptyGunSound;
+
+
+    [Header("Ammo")]
+    public int currentBullets = 30;
+    public int maxBullets = 30;
+
+    [Header("UI")]
+    public TextMeshProUGUI ammoText;
+
+
+
+    void Start()
+    {
+        currentBullets = maxBullets;
+    }
+
 
     void Update()
     {
         HandleGunAiming();
-
         if (Input.GetMouseButton(0) && Time.time >= lastShotTime + fireRate)
         {
             Shoot();
-            lastShotTime = Time.time;
         }
     }
 
     public void Shoot()
     {
+        if (currentBullets <= 0)
+        {
+            audioSource.PlayOneShot(emptyGunSound);
+            return;
+        }
+
+        lastShotTime = Time.time;
+
+        currentBullets--;
+
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
         Vector2 baseDirection = (mousePosition - firePoint.position).normalized;
@@ -57,13 +82,14 @@ public class weaponController : MonoBehaviour
             {
                 projectileScript.SetDirection(spreadDirection);
             }
-
         }
+
         if (shootSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(shootSound);
         }
 
+        UpdateAmmoUI();
 
     }
 
@@ -80,4 +106,10 @@ public class weaponController : MonoBehaviour
         gunTransform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
+    private void UpdateAmmoUI()
+    {
+        if (ammoText != null)
+            ammoText.text = "" + currentBullets;
+    }
 }
+

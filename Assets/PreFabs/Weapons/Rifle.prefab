@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1074864973726588292
 Transform:
   m_ObjectHideFlags: 0
@@ -109,6 +109,10 @@ MonoBehaviour:
   spreadAngle: 5
   audioSource: {fileID: 6129797519888405050}
   shootSound: {fileID: 8300000, guid: 6e43cc3ab68734a659e1a7f750de69c7, type: 3}
+  emptyGunSound: {fileID: 8300000, guid: 5d7c87aabfb51415496e08102e551169, type: 3}
+  currentBullets: 0
+  maxBullets: 50
+  ammoText: {fileID: 0}
 --- !u!82 &6129797519888405050
 AudioSource:
   m_ObjectHideFlags: 0
@@ -121,7 +125,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
