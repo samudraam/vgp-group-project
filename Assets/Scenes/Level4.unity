@@ -21175,6 +21175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: Level5
+  nextLevelIndex: 5
 --- !u!1001 &2129164613
 PrefabInstance:
   m_ObjectHideFlags: 0
