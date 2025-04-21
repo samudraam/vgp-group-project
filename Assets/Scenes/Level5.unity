@@ -4984,9 +4984,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2010566654375873700, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010566654375873700, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 68748594}
+    - target: {fileID: 2010566654375873700, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: maxBullets
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2010566654375873700, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: riflePriceText
       value: 
@@ -5115,6 +5123,10 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 68748593}
+    - target: {fileID: 7741237725001061491, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: maxBullets
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7741237725001061491, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: riflePriceText
       value: 
