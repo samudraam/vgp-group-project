@@ -103,7 +103,7 @@ MonoBehaviour:
   firePoint: {fileID: 1918459675919677426}
   fireRate: 0.2
   projectileSpeed: 15
-  damage: 1
+  damage: 2
   gunTransform: {fileID: 1074864973726588292}
   numberOfProjectiles: 1
   spreadAngle: 5
@@ -111,7 +111,7 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 6e43cc3ab68734a659e1a7f750de69c7, type: 3}
   emptyGunSound: {fileID: 8300000, guid: 5d7c87aabfb51415496e08102e551169, type: 3}
   currentBullets: 0
-  maxBullets: 30
+  maxBullets: 50
   ammoText: {fileID: 0}
   rifleAmmoBaseCost: 5
   shotgunAmmoBaseCost: 10

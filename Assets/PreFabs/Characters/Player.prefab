@@ -113,6 +113,14 @@ MonoBehaviour:
   currentBullets: 0
   maxBullets: 15
   ammoText: {fileID: 0}
+  rifleAmmoBaseCost: 5
+  shotgunAmmoBaseCost: 10
+  ammoPerPurchase: 5
+  priceIncreasePerPurchase: 2
+  pistolAmmoBaseCost: 2
+  pistolPriceText: {fileID: 0}
+  riflePriceText: {fileID: 0}
+  shotgunPriceText: {fileID: 0}
 --- !u!82 &4784716615228244502
 AudioSource:
   m_ObjectHideFlags: 0
@@ -401,6 +409,14 @@ MonoBehaviour:
   currentBullets: 0
   maxBullets: 60
   ammoText: {fileID: 0}
+  rifleAmmoBaseCost: 5
+  shotgunAmmoBaseCost: 10
+  ammoPerPurchase: 5
+  priceIncreasePerPurchase: 2
+  pistolAmmoBaseCost: 2
+  pistolPriceText: {fileID: 0}
+  riflePriceText: {fileID: 0}
+  shotgunPriceText: {fileID: 0}
 --- !u!82 &6129797519888405050
 AudioSource:
   m_ObjectHideFlags: 0
@@ -630,7 +646,7 @@ MonoBehaviour:
   speed: 5
   maxJumps: 2
   firstJumpForce: 8
-  secondJumpForce: 5
+  secondJumpForce: 6.7
   groundCheck: {fileID: 4723573205745006061}
   groundCheckRadius: 0.2
   groundLayer:
@@ -1038,6 +1054,14 @@ MonoBehaviour:
   currentBullets: 0
   maxBullets: 150
   ammoText: {fileID: 0}
+  rifleAmmoBaseCost: 5
+  shotgunAmmoBaseCost: 10
+  ammoPerPurchase: 5
+  priceIncreasePerPurchase: 2
+  pistolAmmoBaseCost: 2
+  pistolPriceText: {fileID: 0}
+  riflePriceText: {fileID: 0}
+  shotgunPriceText: {fileID: 0}
 --- !u!82 &6316444088732041433
 AudioSource:
   m_ObjectHideFlags: 0

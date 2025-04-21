@@ -5509,6 +5509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: Level4
+  nextLevelIndex: 2
 --- !u!1001 &134744956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8580,6 +8581,10 @@ PrefabInstance:
     - target: {fileID: 1074864973726588292, guid: 9f5514691779b438091a909ec90828a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
+      propertyPath: damage
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2010566654375873700, guid: 9f5514691779b438091a909ec90828a0, type: 3}
       propertyPath: ammoText

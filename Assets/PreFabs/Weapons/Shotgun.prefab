@@ -142,7 +142,7 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 41aa1781fffa04a69a959dab315a2ea5, type: 3}
   emptyGunSound: {fileID: 8300000, guid: 5d7c87aabfb51415496e08102e551169, type: 3}
   currentBullets: 0
-  maxBullets: 40
+  maxBullets: 25
   ammoText: {fileID: 0}
   rifleAmmoBaseCost: 5
   shotgunAmmoBaseCost: 10
