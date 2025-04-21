@@ -50,6 +50,14 @@ namespace PlayerCode
       public static int numberOfCoins;
       public TextMeshProUGUI coinsText;
 
+      [Header("Audio")]
+      public AudioSource audioSource;
+      public AudioClip hurtSound;
+      public AudioClip walkSound;
+
+      public AudioSource oneShotSource;
+
+
       // --------------------------------------------------
       void Start()
       {
@@ -76,12 +84,31 @@ namespace PlayerCode
       private void HandleMovement()
       {
          float moveInput = Input.GetAxisRaw("Horizontal");
+         bool isMoving = moveInput != 0;
+
          playerRB.velocity = new Vector2(moveInput * speed, playerRB.velocity.y);
          animator.SetFloat("moving", Mathf.Abs(playerRB.velocity.x));
 
-         if (moveInput != 0)
+         if (isMoving)
          {
             transform.localScale = new Vector3(originalScale.x * Mathf.Sign(moveInput), originalScale.y, originalScale.z);
+         }
+
+         if (isMoving && isGrounded)
+         {
+            if (!audioSource.isPlaying || audioSource.clip != walkSound)
+            {
+               audioSource.clip = walkSound;
+               audioSource.loop = true;
+               audioSource.Play();
+            }
+         }
+         else
+         {
+            if (audioSource.clip == walkSound)
+            {
+               audioSource.Stop();
+            }
          }
       }
 
@@ -184,6 +211,10 @@ namespace PlayerCode
 
       public void TakeDamage()
       {
+         if (hurtSound != null && oneShotSource != null)
+         {
+            oneShotSource.PlayOneShot(hurtSound);
+         }
          StartCoroutine(FlashRed());
       }
 
