@@ -5509,7 +5509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: Level4
-  nextLevelIndex: 2
+  nextLevelIndex: 4
 --- !u!1001 &134744956
 PrefabInstance:
   m_ObjectHideFlags: 0
