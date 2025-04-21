@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using PlayerCode;
+namespace weaponCode{
 public class weaponController : MonoBehaviour
 {
     [Header("Projectile Settings")]
@@ -32,11 +33,23 @@ public class weaponController : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI ammoText;
 
+    [Header("Player Controller Reference")]
+    private playerController playerControllerRef;
 
+    [Header("Ammo Prices")]
+    public int rifleAmmoCost = 5;
+    public int shotgunAmmoCost = 10;
+    public int ammoPerPurchase = 5;
 
     void Start()
     {
         currentBullets = maxBullets;
+        playerControllerRef = FindObjectOfType<playerController>();
+        if (playerControllerRef == null)
+        {
+            Debug.LogWarning("Player Controller not found! Coin-based purchases won't work.");
+        }
+        UpdateAmmoUI();
     }
 
 
@@ -111,5 +124,78 @@ public class weaponController : MonoBehaviour
         if (ammoText != null)
             ammoText.text = "" + currentBullets;
     }
+    public bool BuyRifleAmmo()
+    {
+        // Check if player controller reference exists
+        if (playerControllerRef == null)
+        {
+            Debug.LogError("Player Controller reference is missing!");
+            return false;
+        }
+        
+        // Check if the player has enough coins
+        if (playerController.numberOfCoins >= rifleAmmoCost)
+        {
+            // Check if already at max capacity
+            if (currentBullets >= maxBullets)
+            {
+                Debug.Log("Ammo is already at max capacity!");
+                return false;
+            }
+            
+            // Deduct coins
+            playerController.numberOfCoins -= rifleAmmoCost;
+            PlayerPrefs.SetInt("Coins", playerController.numberOfCoins);
+            PlayerPrefs.Save();
+            
+            // Add ammo (ensuring it doesn't exceed max)
+            currentBullets = Mathf.Min(currentBullets + ammoPerPurchase, maxBullets);
+            
+            UpdateAmmoUI();
+            Debug.Log("Purchased rifle ammo! Current bullets: " + currentBullets);
+            return true;
+        }
+        else
+        {
+            Debug.Log("Not enough coins to buy rifle ammo!");
+            return false;
+        }
+    }
+    
+    public bool BuyShotgunAmmo()
+    {
+        // Check if player controller reference exists
+        if (playerControllerRef == null)
+        {
+            Debug.LogError("Player Controller reference is missing!");
+            return false;
+        }
+        
+        if (playerController.numberOfCoins >= shotgunAmmoCost)
+        {
+            if (currentBullets >= maxBullets)
+            {
+                Debug.Log("Ammo is already at max capacity!");
+                return false;
+            }
+
+            playerController.numberOfCoins -= shotgunAmmoCost;
+            PlayerPrefs.SetInt("Coins", playerController.numberOfCoins);
+            PlayerPrefs.Save();
+        
+            currentBullets = Mathf.Min(currentBullets + ammoPerPurchase, maxBullets);
+    
+            
+            UpdateAmmoUI();
+            Debug.Log("Purchased shotgun ammo! Current bullets: " + currentBullets);
+            return true;
+        }
+        else
+        {
+            Debug.Log("Not enough coins to buy shotgun ammo!");
+            return false;
+        }
+    }
 }
 
+}

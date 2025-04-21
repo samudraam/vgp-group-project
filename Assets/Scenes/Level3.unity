@@ -6138,6 +6138,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4255675882463011599, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: weapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255675882463011599, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255675882463011599, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: weapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: aimPivot
       value: 
@@ -6169,11 +6181,11 @@ PrefabInstance:
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: currentWeapon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1312444915}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: shopMenuScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 612696256}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: pauseMenuScreen
       value: 
@@ -6195,6 +6207,10 @@ PrefabInstance:
     - {fileID: 4786535855741518950, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8047718726706980121, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 3231687651322089508, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 311716059320602424, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 5040483772209362215, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 732075879977517284, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3362842699037445650, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       insertIndex: 1
@@ -6240,7 +6256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 600
   maxHealth: 600
-  healthBar: {fileID: 1065670855}
+  healthBar: {fileID: 0}
   overMenu: {fileID: 878959992}
 --- !u!114 &358487774 stripped
 MonoBehaviour:
@@ -7028,6 +7044,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9113314307025407310, guid: 7c09d4886232c4991b595e4f533c7b22, type: 3}
   m_PrefabInstance: {fileID: 1551261149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &612696256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8032707438612765724, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  m_PrefabInstance: {fileID: 1250910844}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &618738563
 GameObject:
@@ -8417,17 +8438,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608cbedf7fd54490c8ed2854556c4da1, type: 3}
---- !u!114 &1065670855 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4441454217704742534, guid: 8e2ba77e650f2444f9bc26cda6494553, type: 3}
-  m_PrefabInstance: {fileID: 1375149645}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1115773310
 GameObject:
   m_ObjectHideFlags: 0
@@ -23496,6 +23506,14 @@ PrefabInstance:
     - target: {fileID: 5461220324290166682, guid: 11f9a1fa675e441d6a3e7e05f8686754, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983589329525246035, guid: 11f9a1fa675e441d6a3e7e05f8686754, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 358487774}
+    - target: {fileID: 8983589329525246035, guid: 11f9a1fa675e441d6a3e7e05f8686754, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToShop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

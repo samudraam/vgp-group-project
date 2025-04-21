@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using weaponCode;
 
 namespace PlayerCode
 {
@@ -14,6 +15,7 @@ namespace PlayerCode
       private Animator animator;
       private SpriteRenderer spriteRenderer;
       private Vector3 originalScale;
+      private weaponController weaponCtrl;
       public GameObject pauseMenuScreen;
       public GameObject shopMenuScreen;
       public GameObject currentWeapon;
@@ -58,6 +60,8 @@ namespace PlayerCode
       public AudioSource oneShotSource;
 
 
+
+
       // --------------------------------------------------
       void Start()
       {
@@ -68,6 +72,10 @@ namespace PlayerCode
          originalScale = transform.localScale;
          pauseMenuScreen.SetActive(false);
          shopMenuScreen.SetActive(false);
+         if (currentWeapon != null)
+         {
+            weaponCtrl = currentWeapon.GetComponent<weaponController>();
+         }
       }
 
       void Update()
@@ -222,5 +230,32 @@ namespace PlayerCode
       {
          coinsText.text = numberOfCoins.ToString();
       }
+      public void OnBuyRifleAmmoClicked()
+      {
+         weaponController foundWeapon = FindObjectOfType<weaponController>();
+         if (foundWeapon != null)
+         {
+            foundWeapon.BuyRifleAmmo();
+         }
+         else
+         {
+            Debug.LogError("Cannot buy rifle ammo - weapon controller reference is missing!");
+         }
+      }
+      
+     public void OnBuyShotgunAmmoClicked()
+{
+    weaponController foundWeapon = FindObjectOfType<weaponController>();
+    
+    if (foundWeapon != null)
+    {
+        foundWeapon.BuyShotgunAmmo();
+    }
+    else
+    {
+        Debug.LogError("Cannot buy shotgun ammo - no weaponController found in scene!");
+    }
+}
+      
    }
 }

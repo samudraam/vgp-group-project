@@ -698,7 +698,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4162600102254842290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+        m_TargetAssemblyTypeName: PlayerCode.playerController, Assembly-CSharp
+        m_MethodName: OnBuyShotgunAmmoClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4750033362675987531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,7 +1313,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2465827752001995573}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+        m_TargetAssemblyTypeName: PlayerCode.playerController, Assembly-CSharp
+        m_MethodName: OnBuyRifleAmmoClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7852674865686680395
 GameObject:
   m_ObjectHideFlags: 0
