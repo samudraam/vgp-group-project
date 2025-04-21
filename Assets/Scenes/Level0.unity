@@ -3776,6 +3776,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1741756975}
     m_Modifications:
+    - target: {fileID: 2605226409214378962, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+      propertyPath: m_margin.w
+      value: -168.28773
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605226409214378962, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+      propertyPath: m_margin.z
+      value: 2119.6584
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605388740957263857, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 4674648466105334357, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3862,7 +3874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223510165297152840, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -38.6
       objectReference: {fileID: 0}
     - target: {fileID: 7089793520574864071, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7387,11 +7399,11 @@ RectTransform:
   - {fileID: 1377122528}
   - {fileID: 1146232871}
   - {fileID: 584389537}
-  - {fileID: 2022147553}
   - {fileID: 908057314}
   - {fileID: 50750968}
   - {fileID: 112901614}
   - {fileID: 1145765126}
+  - {fileID: 2022147553}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8084,7 +8096,7 @@ RectTransform:
   m_GameObject: {fileID: 2022147552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9889504, y: 1.9889504, z: 1.9889504}
+  m_LocalScale: {x: 1.9889503, y: 1.9889503, z: 1.9889503}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1159899420}
@@ -8092,7 +8104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 40, y: 60}
+  m_AnchoredPosition: {x: 30.8, y: 50}
   m_SizeDelta: {x: 25, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022147554
