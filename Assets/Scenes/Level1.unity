@@ -21965,6 +21965,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 446593169}
+    - target: {fileID: 7089793520574864071, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LeaveShop
+      objectReference: {fileID: 0}
     - target: {fileID: 8032707438612765724, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
       propertyPath: m_Name
       value: Shop
@@ -22107,6 +22111,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4255675882463011599, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: weapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255675882463011599, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255675882463011599, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      propertyPath: weapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       propertyPath: aimPivot
       value: 
@@ -22165,6 +22181,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 1341698013520819267, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
     - {fileID: 8047718726706980121, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 3231687651322089508, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 5040483772209362215, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 311716059320602424, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 732075879977517284, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3362842699037445650, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       insertIndex: -1

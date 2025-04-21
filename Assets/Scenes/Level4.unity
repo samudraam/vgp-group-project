@@ -12283,6 +12283,10 @@ PrefabInstance:
     - {fileID: 9134004415055914013, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8047718726706980121, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 732075879977517284, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 3231687651322089508, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 5040483772209362215, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+    - {fileID: 311716059320602424, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3362842699037445650, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
       insertIndex: 1
@@ -13194,7 +13198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 945778513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e8912f37ea294f55af60bdc6bbc741c, type: 3}
+  m_Script: {fileID: 11500000, guid: ad539ae31ced245f2822c153f19d853e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &945778516
@@ -16834,6 +16838,18 @@ PrefabInstance:
     - target: {fileID: 4674648466105334357, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089793520574864071, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 320317129}
+    - target: {fileID: 7089793520574864071, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LeaveShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089793520574864071, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerCode.playerController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8032707438612765724, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
       propertyPath: m_Name

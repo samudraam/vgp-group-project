@@ -106,7 +106,7 @@ MonoBehaviour:
   damage: 1
   gunTransform: {fileID: 841090597215105225}
   numberOfProjectiles: 1
-  spreadAngle: 1
+  spreadAngle: 5
   audioSource: {fileID: 4784716615228244502}
   shootSound: {fileID: 8300000, guid: c8842dfe4f6244665a45c753fb6759c9, type: 3}
   emptyGunSound: {fileID: 8300000, guid: 5d7c87aabfb51415496e08102e551169, type: 3}
