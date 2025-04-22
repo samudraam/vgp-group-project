@@ -12,7 +12,7 @@ public class OutOfBounds : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player fell out of bounds! Restarting game...");
-
+            PlayerPrefs.SetInt("Coins", 0); 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

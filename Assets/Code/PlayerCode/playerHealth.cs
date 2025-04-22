@@ -57,6 +57,7 @@ namespace PlayerCode
         {
             Debug.Log("Player has died!");
             Destroy(gameObject);
+            PlayerPrefs.SetInt("Coins", 0); 
             if (overMenu != null)
                 overMenu.SetActive(true);
         }
