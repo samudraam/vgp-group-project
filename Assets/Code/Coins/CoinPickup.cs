@@ -14,7 +14,7 @@ public class CoinPickup : MonoBehaviour
             playerController.numberOfCoins++; 
             PlayerPrefs.SetInt("Coins", playerController.numberOfCoins);
             Destroy(gameObject);
-            Debug.Log("coin picked up!");
+            
         }
     }
 }
