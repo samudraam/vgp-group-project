@@ -312,7 +312,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerCode.playerController, Assembly-CSharp
         m_MethodName: LeaveShop
         m_Mode: 1
@@ -686,7 +686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: 64.094}
+  m_AnchoredPosition: {x: -384, y: 70}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3458302973272789712
@@ -1657,7 +1657,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6405630510935513077, guid: 9d0c004ed2cf148ed9608f0d86be7c45, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerCode.playerController, Assembly-CSharp
         m_MethodName: GoToUpgrade
         m_Mode: 1
@@ -2872,7 +2872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1117.6499, y: -55}
+  m_AnchoredPosition: {x: 1117.6499, y: -38.6}
   m_SizeDelta: {x: 764.69995, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9028246039757417595
@@ -2966,7 +2966,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 643.91815, w: 0}
+  m_margin: {x: 0, y: 0, z: 2119.6584, w: -168.28773}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

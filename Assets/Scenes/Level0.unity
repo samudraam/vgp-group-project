@@ -1716,7 +1716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 918736915080689147, guid: a0fd509958ecc45f5811efea1d0f743f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1169971613825463779, guid: a0fd509958ecc45f5811efea1d0f743f, type: 3}
       propertyPath: m_Sprite
@@ -1804,15 +1804,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284138026090269105, guid: a0fd509958ecc45f5811efea1d0f743f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4284138026090269105, guid: a0fd509958ecc45f5811efea1d0f743f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4284138026090269105, guid: a0fd509958ecc45f5811efea1d0f743f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4284138026090269105, guid: a0fd509958ecc45f5811efea1d0f743f, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1868,6 +1868,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ade183fbbd3ae4d47a0c5dd5df625517, type: 3}
+    - target: {fileID: 8195373136979862908, guid: a0fd509958ecc45f5811efea1d0f743f, type: 3}
+      propertyPath: m_margin.x
+      value: -161.8335
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4007,18 +4011,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1741756975}
     m_Modifications:
-    - target: {fileID: 2605226409214378962, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
-      propertyPath: m_margin.w
-      value: -168.28773
-      objectReference: {fileID: 0}
-    - target: {fileID: 2605226409214378962, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
-      propertyPath: m_margin.z
-      value: 2119.6584
-      objectReference: {fileID: 0}
-    - target: {fileID: 3605388740957263857, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 70
-      objectReference: {fileID: 0}
     - target: {fileID: 4674648466105334357, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4103,33 +4095,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 446593169}
-    - target: {fileID: 5993455836340716720, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToUpgrade
-      objectReference: {fileID: 0}
-    - target: {fileID: 6223510165297152840, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6223510165297152840, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -38.6
-      objectReference: {fileID: 0}
     - target: {fileID: 7089793520574864071, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 446593169}
-    - target: {fileID: 7089793520574864071, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LeaveShop
-      objectReference: {fileID: 0}
     - target: {fileID: 8032707438612765724, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
       propertyPath: m_Name
       value: Shop
-      objectReference: {fileID: 0}
-    - target: {fileID: 8032707438612765724, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

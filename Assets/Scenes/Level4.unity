@@ -13559,6 +13559,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SpeedUpgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 8195373136979862908, guid: a0fd509958ecc45f5811efea1d0f743f, type: 3}
+      propertyPath: m_margin.x
+      value: -233.11035
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
