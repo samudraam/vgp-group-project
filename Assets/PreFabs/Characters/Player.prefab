@@ -640,8 +640,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4088115bc5b554eda838d6cfa5bae7eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuScreen: {fileID: 0}
-  shopMenuScreen: {fileID: 0}
+  pauseMenuScreen: {fileID: 5461220324290166682, guid: 11f9a1fa675e441d6a3e7e05f8686754, type: 3}
+  shopMenuScreen: {fileID: 8032707438612765724, guid: 243bcd0416fb94adf8433bd73ff19283, type: 3}
+  upgradeMenuScreen: {fileID: 918736915080689147, guid: a0fd509958ecc45f5811efea1d0f743f, type: 3}
   currentWeapon: {fileID: 0}
   speed: 5
   maxJumps: 2

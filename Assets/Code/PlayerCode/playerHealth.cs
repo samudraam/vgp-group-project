@@ -61,5 +61,13 @@ namespace PlayerCode
             if (overMenu != null)
                 overMenu.SetActive(true);
         }
+
+        public void IncreaseHealth(float amount)
+        {
+            maxHealth += amount;
+            health = maxHealth;
+            Debug.Log("Player's max health: " + maxHealth);
+            UpdateHealthBar();
+        }
     }
 }

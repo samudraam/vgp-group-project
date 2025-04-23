@@ -18,6 +18,7 @@ namespace PlayerCode
       private weaponController weaponCtrl;
       public GameObject pauseMenuScreen;
       public GameObject shopMenuScreen;
+      public GameObject upgradeMenuScreen;
       public GameObject currentWeapon;
 
       // Movement
@@ -51,6 +52,12 @@ namespace PlayerCode
       [Header("UI")]
       public static int numberOfCoins;
       public TextMeshProUGUI coinsText;
+      public TextMeshProUGUI spaceSuitLevelText;
+      public TextMeshProUGUI jetPackLevelText;
+      public TextMeshProUGUI powerSystemLevelText;
+      public TextMeshProUGUI spaceSuitPriceText;
+      public TextMeshProUGUI jetPackPriceText;
+      public TextMeshProUGUI powerSystemPriceText;
 
       [Header("Audio")]
       public AudioSource audioSource;
@@ -58,9 +65,13 @@ namespace PlayerCode
       public AudioClip walkSound;
 
       public AudioSource oneShotSource;
+      
+      //Player upgrade
+      public int spaceSuitLevel = 0;
+      public int jetPackLevel = 0;
+      public int powerSystemLevel = 0;
 
-
-
+      
 
       // --------------------------------------------------
       void Start()
@@ -72,6 +83,7 @@ namespace PlayerCode
          originalScale = transform.localScale;
          pauseMenuScreen.SetActive(false);
          shopMenuScreen.SetActive(false);
+         upgradeMenuScreen.SetActive(false);
          if (currentWeapon != null)
          {
             weaponCtrl = currentWeapon.GetComponent<weaponController>();
@@ -208,9 +220,27 @@ namespace PlayerCode
          shopMenuScreen.SetActive(true);
          pauseMenuScreen.SetActive(false);
       }
+      
+      public void GoToUpgrade()
+      {
+         upgradeMenuScreen.SetActive(true);
+         shopMenuScreen.SetActive(false);
+      }
+      
+      public void BackToShop()
+      {
+         upgradeMenuScreen.SetActive(false);
+         shopMenuScreen.SetActive(true);
+      }
       public void LeaveShop()
       {
          shopMenuScreen.SetActive(false);
+         pauseMenuScreen.SetActive(true);
+      }
+      
+      public void LeaveUpgrade()
+      {
+         upgradeMenuScreen.SetActive(false);
          pauseMenuScreen.SetActive(true);
       }
 
@@ -277,6 +307,73 @@ namespace PlayerCode
          else
          {
             transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+         }
+      }
+      
+      public void HealthUpgrade()
+      {
+         var cost = (spaceSuitLevel + 1) * 5;
+         if (numberOfCoins >= cost && spaceSuitLevel < 2)
+         {
+            numberOfCoins -= cost;
+            PlayerPrefs.SetInt("Coins", numberOfCoins);
+            PlayerPrefs.Save();
+            spaceSuitLevel++;
+            PlayerHealth playerHeath = FindObjectOfType<PlayerHealth>();
+            playerHeath.IncreaseHealth(200);
+            if (spaceSuitLevel == 1)
+            {
+               spaceSuitLevelText.text = "Level 2";
+               spaceSuitPriceText.text = "-10";
+            } else if (spaceSuitLevel == 2) 
+            {
+               spaceSuitLevelText.text = "Max Level";
+               spaceSuitPriceText.text = "0";
+            }
+         }
+      }
+      public void JumpUpgrade()
+      {
+         var cost = (jetPackLevel + 1) * 5;
+         if (numberOfCoins >= cost && jetPackLevel < 2)
+         {
+            numberOfCoins -= cost;
+            PlayerPrefs.SetInt("Coins", numberOfCoins);
+            PlayerPrefs.Save();
+            jetPackLevel++;
+            firstJumpForce += jetPackLevel * 1f;
+            secondJumpForce += jetPackLevel * 1f;
+            if (jetPackLevel == 1)
+            {
+               jetPackLevelText.text = "Level 2";
+               jetPackPriceText.text = "-10";
+            } else if (jetPackLevel == 2) 
+            {
+               jetPackLevelText.text = "Max Level";
+               jetPackPriceText.text = "0";
+            }
+         }
+      }
+      
+      public void SpeedUpgrade()
+      {
+         var cost = (powerSystemLevel + 1) * 5;
+         if (numberOfCoins >= cost && powerSystemLevel < 2)
+         {
+            numberOfCoins -= cost;
+            PlayerPrefs.SetInt("Coins", numberOfCoins);
+            PlayerPrefs.Save();
+            powerSystemLevel++;
+            speed += powerSystemLevel * 2f;
+            if (powerSystemLevel == 1)
+            {
+               powerSystemLevelText.text = "Level 2";
+               powerSystemPriceText.text = "-10";
+            } else if (powerSystemLevel == 2) 
+            {
+               powerSystemLevelText.text = "Max Level";
+               powerSystemPriceText.text = "0";
+            }
          }
       }
 
